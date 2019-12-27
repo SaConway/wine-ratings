@@ -76,7 +76,7 @@ form input[type="text"]:first-of-type {
 form input {
   display: block;
   margin-top: 2rem;
-  width: 20vw;
+  width: 100%;
 }
 
 form input[type="text"]:focus {
@@ -138,7 +138,7 @@ form button {
   border: 1px solid var(--accent-color);
   padding: 0.5rem;
   background: none;
-  width: calc(10vw - 0.5rem);
+  width: 150px;
 }
 
 .wines {
@@ -153,13 +153,25 @@ form button {
   color: var(--secondary-color);
   border: 1px solid currentColor;
   border-radius: 0.2rem;
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   padding: 1rem;
   text-align: center;
   background-color: #fff;
 }
 
+.wine-img {
+  width: 70px;
+  margin-right: 1rem;
+}
+
 @media (max-width: 900px) {
+  .container {
+    width: 95%;
+  }
+
   .wines {
     grid-template-columns: repeat(3, 1fr);
   }

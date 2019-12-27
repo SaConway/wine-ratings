@@ -35,10 +35,13 @@
         <div v-else class="wines">
             <div v-for="wine in wines" class="wine">
                 <img :src='wine.img' class="wine-img">
-                <h4>{{ wine.name }}</h4>
-                <h5>{{ wine.kind }}</h5>
-                <p>{{ wine.rate }}</p>
-                <p>&#8362; {{ wine.price }}</p>
+
+                <div class="wine-content">
+                    <h4>{{ wine.name }}</h4>
+                    <h5>{{ wine.kind }}</h5>
+                    <p>{{ wine.rate }}</p>
+                    <p>&#8362; {{ wine.price }}</p>
+                </div>
             </div>
         </div>
     </div>
