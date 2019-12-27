@@ -1,176 +1,178 @@
-:root{
-    --primary-color: #cf3030;
-    --secondary-color: #141414;
-    --accent-color: #d9d9d9;
+:root {
+  --primary-color: #cf3030;
+  --secondary-color: #141414;
+  --accent-color: #d9d9d9;
 }
 
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-html{
-    background-color: var(--secondary-color);
-    margin: 2rem 3rem;
+html {
+  background-color: var(--secondary-color);
+  margin: 2rem 3rem;
 }
 
-button{
-    cursor: pointer;
+button {
+  cursor: pointer;
 }
 
-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-header button{
-    background-color: transparent;
-    border: none;
+header button {
+  background-color: transparent;
+  border: none;
 }
 
-button:focus{
-    outline: none;
+button:focus {
+  outline: none;
 }
 
-header button img{
-    width: 40px;
+header button img {
+  width: 40px;
 }
 
-h1{
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    margin-bottom: 0;
-    font-family: 'Open Sans', sans-serif;
+h1 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
-.container{
-    width: 80%;
-    margin: 0 auto;
+.container {
+  width: 80%;
+  margin: 0 auto;
 }
 
-form, .wines{
-    font-family: 'M PLUS 1p', sans-serif;
+form,
+.wines {
+  font-family: "M PLUS 1p", sans-serif;
 }
 
-form{
-    margin-top: 1.5rem;
+form {
+  margin-top: 1.5rem;
 }
 
 form input[type="text"] {
-    padding: .5rem;
-    font-size: .8rem;
-    background: none;
-    border: none;
-    border-left: 1px solid var(--accent-color);
-    border-bottom-left-radius: .2rem;
-    color: var(--accent-color);
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  background: none;
+  border: none;
+  border-left: 1px solid var(--accent-color);
+  border-bottom-left-radius: 0.2rem;
+  color: var(--accent-color);
 }
 
-form input[type="text"]:first-of-type{
-    margin-top: 3rem;
+form input[type="text"]:first-of-type {
+  margin-top: 3rem;
 }
 
-form input{
-    display: block;
-    margin-top: 2rem;
-    width: 20vw;
+form input {
+  display: block;
+  margin-top: 2rem;
+  width: 20vw;
 }
 
-form input[type="text"]:focus{
-    outline: none;
-    border-left: 2px solid var(--primary-color);
+form input[type="text"]:focus {
+  outline: none;
+  border-left: 2px solid var(--primary-color);
 }
 
-form label, form .file-name{
-    color: var(--accent-color);
+form label,
+form .file-name {
+  color: var(--accent-color);
 }
 
 form .input-file-trigger {
-    margin-top: 2rem;
-    display: inline-block;
-    background: transparent;
-    width: fit-content;
-    padding: .5rem 2rem;
-    margin-right: 1rem;
-    font-size: .8rem;
-    cursor: pointer;
-    color: var(--accent-color);
-    border: 1px solid currentColor;
+  margin-top: 2rem;
+  display: inline-block;
+  background: transparent;
+  width: fit-content;
+  padding: 0.5rem 2rem;
+  margin-right: 1rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: var(--accent-color);
+  border: 1px solid currentColor;
 }
 
 form .input-file {
-    position: absolute;
-    top: 0; 
-    left: 0;
-    opacity: 0;
-    cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
 }
 
-form .add-btn{
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-    margin: 3rem 1rem 0 0;
-    transition: all .2s ease-in-out;
+form .add-btn {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  margin: 3rem 1rem 0 0;
+  transition: all 0.2s ease-in-out;
 }
 
-form .add-btn:hover{
-    border-color: var(--secondary-color);
-    color: var(--accent-color);
-    background-color: var(--primary-color);
+form .add-btn:hover {
+  border-color: var(--secondary-color);
+  color: var(--accent-color);
+  background-color: var(--primary-color);
 }
 
-form .cancel-btn{
-    color: var(--accent-color);
-    transition: all .2s ease-in-out;
+form .cancel-btn {
+  color: var(--accent-color);
+  transition: all 0.2s ease-in-out;
 }
 
-form .cancel-btn:hover{
-    border-color: var(--secondary-color);
-    color: var(--secondary-color);
-    background-color: var(--accent-color);
+form .cancel-btn:hover {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+  background-color: var(--accent-color);
 }
 
-form button{
-    border: 1px solid var(--accent-color);
-    padding: .5rem;
-    background: none;
-    width: calc(10vw - .5rem);
+form button {
+  border: 1px solid var(--accent-color);
+  padding: 0.5rem;
+  background: none;
+  width: calc(10vw - 0.5rem);
 }
 
-.wines{
-    margin-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 1rem;
-    grid-row-gap: 1rem;
+.wines {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
 }
 
-.wine{
-    color: var(--secondary-color);
-    border: 1px solid currentColor;
-    border-radius: .2rem;
-    display: inline-block;
-    padding: 1rem;
-    text-align: center;
-    background-color: #fff;
+.wine {
+  color: var(--secondary-color);
+  border: 1px solid currentColor;
+  border-radius: 0.2rem;
+  display: inline-block;
+  padding: 1rem;
+  text-align: center;
+  background-color: #fff;
 }
 
-@media (max-width: 900px){
-    .wines{
-        grid-template-columns: repeat(3, 1fr);
-    }
+@media (max-width: 900px) {
+  .wines {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-@media (max-width: 700px){
-    .wines{
-        grid-template-columns: repeat(2, 1fr);
-    }
+@media (max-width: 700px) {
+  .wines {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-@media (max-width: 500px){
-    .wines{
-        grid-template-columns: 1fr;
-    }
+@media (max-width: 500px) {
+  .wines {
+    grid-template-columns: 1fr;
+  }
 }

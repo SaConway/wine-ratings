@@ -83,8 +83,7 @@ new Vue({
       this.showForm = true;
     },
     onFileChange() {
-    console.log("Log: onFileChange -> event", this.$refs.imgFile.files[0].name);
-        this.fileName = this.$refs.imgFile.files[0].name;
+      this.fileName = this.$refs.imgFile.files[0].name;
     }
   }
 });
