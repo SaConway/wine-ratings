@@ -172,13 +172,12 @@ form button {
   background-color: #fff;
   position: relative;
   box-shadow: 0 0 5px var(--accent-color);
+  overflow: hidden;
   transition: transform 0.5s ease-in-out;
 }
 
 .wine::after {
   content: "";
-  width: 0;
-  height: 0;
   border-top: 70px solid transparent;
   border-bottom: 70px solid transparent;
   border-left: 70px solid var(--third-color);
