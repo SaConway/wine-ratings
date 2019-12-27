@@ -2,6 +2,7 @@
   --primary-color: #cf3030;
   --secondary-color: #141414;
   --accent-color: #d9d9d9;
+  --third-color: #141414ee;
 }
 
 * {
@@ -169,11 +170,27 @@ form button {
   padding: 1rem;
   text-align: center;
   background-color: #fff;
+  position: relative;
+  box-shadow: 0 0 5px var(--accent-color);
   transition: transform 0.5s ease-in-out;
+}
+
+.wine::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 70px solid transparent;
+  border-bottom: 70px solid transparent;
+  border-left: 70px solid var(--third-color);
+  position: absolute;
+  top: -46px;
+  right: -11px;
+  transform: rotate(-45deg);
 }
 
 .wine:hover {
   animation: scale 0.5s ease-in forwards;
+  z-index: 3;
 }
 
 .wine-img {
@@ -182,10 +199,17 @@ form button {
   margin-right: 1rem;
 }
 
+.vue-star-rating {
+  position: absolute;
+  top: 20px;
+  right: -6px;
+  transform: rotate(22deg);
+  z-index: 2;
+}
+
+/* Animations */
+
 @keyframes scale {
-  0% {
-    transform: scale(1);
-  }
   90% {
     transform: scale(1.75);
   }
@@ -195,9 +219,6 @@ form button {
 }
 
 @keyframes adding {
-  0% {
-    letter-spacing: normal;
-  }
   50% {
     letter-spacing: 0.1rem;
   }
@@ -215,6 +236,8 @@ form button {
   }
 }
 
+/* Media Queries */
+
 @media (max-width: 900px) {
   .container {
     width: 100%;
@@ -227,5 +250,11 @@ form button {
 
   .wines {
     grid-template-columns: 1fr;
+  }
+
+  .wine:hover {
+    animation: none;
+    transition: transform 0.3s ease-in;
+    transform: scale(1.1);
   }
 }

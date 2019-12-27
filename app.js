@@ -1,6 +1,8 @@
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
+Vue.component("star-rating", VueStarRating.default);
+
 new Vue({
   el: "#app",
   data: {
