@@ -32,7 +32,7 @@
 
         <div v-else class="wines">
             <div v-for="wine in wines" class="wine">
-                <img :src='wine.img' alt="">
+                <img :src='wine.img' class="wine-img">
                 <h4>{{ wine.name }}</h4>
                 <h5>{{ wine.kind }}</h5>
                 <p>{{ wine.rate }}</p>
@@ -45,6 +45,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-storage.js"></script>
+    <script src="config.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
