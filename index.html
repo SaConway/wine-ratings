@@ -43,11 +43,9 @@
                 <div class="wine-content">
                     <h4>{{ wine.name }}</h4>
                     <h5>{{ wine.kind }}</h5>
-                    <p>{{ wine.rate }}</p>
                     <star-rating v-model="wine.rate" :show-rating="false" :round-start-rating="false" :read-only="true"
                         :star-size="15">
                     </star-rating>
-
                     <p>&#8362; {{ wine.price }}</p>
                 </div>
             </div>
