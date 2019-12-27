@@ -12,7 +12,6 @@
 
 html {
   background-color: var(--secondary-color);
-  margin: 2rem 3rem;
 }
 
 button {
@@ -48,6 +47,7 @@ h1 {
 .container {
   width: 80%;
   margin: 0 auto;
+  padding: 2rem 3rem;
 }
 
 form,
@@ -169,7 +169,8 @@ form button {
 
 @media (max-width: 900px) {
   .container {
-    width: 95%;
+    width: 100%;
+    padding: 2rem;
   }
 
   .wines {
