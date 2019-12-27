@@ -27,7 +27,11 @@
             <span v-if="fileName" class="file-name">{{ fileName }}</span>
 
             <div>
-                <button @click="onAddWine($event)" class="add-btn">ADD</button>
+                <button @click="onAddWine($event)" class="add-btn">
+                    <span v-if="isAdding" class="adding">ADDING...</span>
+                    <span v-else>ADD</span>
+                </button>
+
                 <button @click="onCancel($event)" class="cancel-btn">CANCEL</button>
             </div>
         </form>

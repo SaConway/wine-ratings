@@ -42,6 +42,8 @@ h1 {
   color: var(--primary-color);
   margin-bottom: 0;
   font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .container {
@@ -57,6 +59,7 @@ form,
 
 form {
   margin-top: 1.5rem;
+  animation: fade 0.5s ease-in;
 }
 
 form input[type="text"] {
@@ -123,6 +126,11 @@ form .add-btn:hover {
   background-color: var(--primary-color);
 }
 
+form .add-btn .adding {
+  letter-spacing: 0.1rem;
+  animation: adding 1s infinite;
+}
+
 form .cancel-btn {
   color: var(--accent-color);
   transition: all 0.2s ease-in-out;
@@ -147,6 +155,7 @@ form button {
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
+  animation: fade 0.5s ease-in;
 }
 
 .wine {
@@ -160,12 +169,50 @@ form button {
   padding: 1rem;
   text-align: center;
   background-color: #fff;
+  transition: transform 0.5s ease-in-out;
+}
+
+.wine:hover {
+  animation: scale 0.5s ease-in forwards;
 }
 
 .wine-img {
   width: 70px;
   height: 170px;
   margin-right: 1rem;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1.75);
+  }
+  100% {
+    transform: scale(1.7);
+  }
+}
+
+@keyframes adding {
+  0% {
+    letter-spacing: normal;
+  }
+  50% {
+    letter-spacing: 0.1rem;
+  }
+  100% {
+    letter-spacing: normal;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 900px) {
@@ -178,18 +225,6 @@ form button {
     width: 130px;
   }
 
-  .wines {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 700px) {
-  .wines {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
   .wines {
     grid-template-columns: 1fr;
   }

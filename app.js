@@ -12,7 +12,8 @@ new Vue({
       price: null
     },
     showForm: false,
-    fileName: null
+    fileName: null,
+    isAdding: false
   },
   mounted() {
     this.getWines();
@@ -37,6 +38,8 @@ new Vue({
 
       if (!this.validate()) return;
 
+      this.isAdding = true;
+
       const img = this.$refs.imgFile.files[0];
       const storageRef = firebase.storage().ref("wine-images/" + img.name);
       const uploadTask = storageRef.put(img);
@@ -47,6 +50,7 @@ new Vue({
             this.addWine(imgURL);
             this.resetForm();
             this.getWines();
+            this.isAdding = false;
           }); //getDownloadURL
         })
         .bind(this); //state_changed
