@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p|Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Wine Ratings</title>
+</head>
+<body>
+    <div id="app" class="container">
+
+        <header>
+            <h1>Wine Ratings</h1>
+            <button v-if="!showForm" @click="onShowForm()"><img src="add.svg"></button>
+        </header>
+
+        <form v-if="showForm">
+            <input type="text" placeholder="NAME" v-model.trim="form.name" autocomplete="off">
+            <input type="text" placeholder="KIND" v-model.trim="form.kind" autocomplete="off">
+            <input type="text" placeholder="RATE" v-model.trim.number="form.rate" autocomplete="off">
+            <input type="text" placeholder="PRICE" v-model.trim.number="form.price" autocomplete="off">
+            <input type="file" @change="onFileChange" ref="imgFile" class="input-file" id="my-file">
+            <label tabindex="0" for="my-file" class="input-file-trigger">IMAGE</label>
+            <span v-if="fileName" class="file-name">{{ fileName }}</span>
+
+            <div>
+                <button @click="onAddWine($event)" class="add-btn">ADD</button>
+                <button @click="onCancel($event)" class="cancel-btn">CANCEL</button>
+            </div>
+        </form>
+
+        <div v-else class="wines">
+            <div v-for="wine in wines" class="wine">
+                <img :src='wine.img' alt="">
+                <h4>{{ wine.name }}</h4>
+                <h5>{{ wine.kind }}</h5>
+                <p>{{ wine.rate }}</p>
+                <p>&#8362; {{ wine.price }}</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="vue.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-storage.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
