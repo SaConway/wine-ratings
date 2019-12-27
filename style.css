@@ -173,6 +173,10 @@ form button {
     padding: 2rem;
   }
 
+  form button {
+    width: 130px;
+  }
+
   .wines {
     grid-template-columns: repeat(3, 1fr);
   }
